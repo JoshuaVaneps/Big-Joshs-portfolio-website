@@ -1,0 +1,174 @@
+/*the margin causing there to be no space between the outside of our content and the background */
+/*box sizing is set to border box so that our boxes display parallel and gives our boxes width and height regardless of if we set them*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --main-bgc: linear-gradient(red, yellow);
+    --secondary-bgc: #6FA8DC;
+    --text: #fbfaf6;
+
+}
+
+.hero { 
+    height: 200px;
+    width: 100%;
+    background-image: url("./pxfuel.jpg"); /*gives our image a source*/
+    background-size: cover; /*Scales the image (while preserving its ratio) to the smallest possible size to fill the container */
+}
+
+header {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: var(--main-bgc);
+    color: var(--text);
+    border: solid 10px;
+    border-color: black;
+    -webkit-text-stroke:#6FA8DC 1px;
+}
+
+/*this is setting our header title and navigation side by side and applying a font size*/
+header h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+
+header nav {
+    padding-top: 15px;/* puts space between the top of the page and the list items */
+    margin-right: 20px;/* puts space on the left side of the list items */
+    float: right;/*makes our list element float to the right of container*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;/*is applying multiple applying font options in case our first choice doest run*/
+    font-size: 20px;
+    
+}
+
+/*sets our text color to white and stops underline*/
+a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+header nav ul li {
+    display: inline-flex;/*setting our list elements side by side */
+    margin-left: 25px; /* puts space to the right of the lists */
+    padding: 10px;
+    background-color: black;
+}
+
+.About-Me{
+
+}
+
+.main {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  h1 {
+    font-size: 50px;
+    word-break: break-all;
+  }
+
+  body {
+    background-color: #f1f1f1;
+    padding: 20px;
+    font-family: Arial;
+  }
+  
+  .portfolio {
+    margin: 8px -16px;
+    display: flex;
+  }
+  
+  /* Add padding BETWEEN each column (if you want) */
+  .portfolio,
+  .portfolio > .column {
+    padding: 8px;
+  }
+  
+  /* Create four equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 25%;
+  }
+  
+  /* Clear floats after rows */
+  .portfolio:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Content */
+  .content {
+    background-color: white;
+    padding: 10px;
+  }
+  
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 900px) {
+    .column {
+      width: 50%;
+    }
+  }
+  
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
+/*
+.content{
+   background-color: var(--secondary-bgc);
+}
+
+#About-Me, #projects {
+    display: block;
+    color: var(--text);
+    width: 800px;
+    margin-left: 40%;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    padding: 10%;
+    background-image: var(--main-bgc);
+    border: solid 5px black;
+
+    
+}
+
+img{
+    display: flex;
+    float: right;
+    margin-right: 50px;
+    margin-left: 40%;
+    width: 800px;
+   
+}
+
+h2 {
+    block-size: fit-content;
+    width: fit-content;
+    border: solid black;
+    background-color: black;
+}
+
+h3 {
+    display: flex;
+    float: right;
+    margin-right: 30%;
+    margin-left: 40%;
+    block-size: fit-content;
+    width: fit-content;
+    border: solid black;
+
+   
+}
+
+/*sets the font of our text to 16px*/
+p {
+    font-size: 16px;
+}

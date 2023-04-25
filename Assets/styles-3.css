@@ -1,0 +1,348 @@
+/*the margin causing there to be no space between the outside of our content and the background */
+/*box sizing is set to border box so that our boxes display parallel and gives our boxes width and height regardless of if we set them*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --main-bgc: linear-gradient(red, yellow);
+    --secondary-bgc: #6FA8DC;
+    --text: #fbfaf6;
+    --first-highlight:black;
+    --second-highlight:white;
+
+}
+
+/*banner below nav bar, settings below set its height width source and scale*/
+.hero { 
+    height: 200px;
+    width: 100%;
+    background-image: url("./pxfuel.jpg"); 
+    background-size: cover; /*Scales the image (while preserving its ratio) to the smallest possible size to fill the container */
+}
+
+/*main code for our header element, controls our font background color text color and gradiant*/
+header {
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: var(--main-bgc);
+    color: var(--text);
+    border: solid 10px;
+    border-color: black;
+    -webkit-text-stroke:#6FA8DC 1px;
+}
+
+/*this is setting our header title and navigation side by side and applying a font size*/
+header h1 {
+    display: inline-block;
+    font-size: 48px;
+}
+
+header nav {
+    padding-top: 15px;/* puts space between the top of the page and the list items */
+    margin-right: 20px;/* puts space on the left side of the list items */
+    float: right;/*makes our list element float to the right of container*/
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;/*is applying multiple applying font options in case our first choice doest run*/
+    font-size: 20px;
+    
+}
+
+/*sets our text color to white and stops underline*/
+a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+header nav ul li {
+    display: inline-flex;/*setting our list elements side by side */
+    margin-left: 25px; /* puts space to the right of the lists */
+    padding: 10px;
+    background-color: black;
+    box-shadow: 0 0 20px #fff, 0 0 20px #f0f, 0 0 20px #0ff;
+}
+/* giving our text a inner highlight effect when hovered over*/
+nav ul li:hover{
+    box-shadow: inset 0 0 20px white;
+   
+
+}
+
+/*sets our background color to our highlight variable whcih 
+in this case is black*/
+body{
+    background: var(--first-highlight);
+}
+
+/*adds padding and margin to our container*/
+.wrapper {
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+/*this is all of our main settings for the about me section 
+further margin control and height and with for the section*/
+#About-Me {
+    height:400px;
+    width:60%;
+    color: var(--second-highlight);
+    margin-right: 20px;
+    margin-left: 20px;
+    font-size: 24px;
+  }
+
+  /*seperate elements for our h2 text of our about me, mainly 
+  adding a gradiant and margins away from the main paragraph*/
+ .About-Me >h2{
+    background-image: linear-gradient(#6FA8DC, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+    border-bottom: solid #fff;
+    }
+
+    /*code for out ptofile picture set to the aside catagory
+    for easier spacing */
+  aside.image-section {
+    height:     400px;
+    width:      30%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: auto 100%;
+    border-radius: 50%;
+  }
+
+/*h2 element for our project section this has all of our 
+margin information spacing and gradiant variables*/
+.projects >h2{
+    border-top: solid #e7e7e7;
+    height: min-content;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 30px;
+    background-image: linear-gradient(#6FA8DC, white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding-top: 10px;
+    text-indent: 10px;
+}
+/*styling for the smalll paragraph element of the about me this 
+code simply gives spacing info and a dotted border along with lower opacity*/
+.projects >p{
+    display: flex;
+    color: var(--text);
+    margin-left: 40px;
+    margin-right: 20px;
+    border: dotted white;
+    width: fit-content;
+    font-style: italic;
+    opacity: .5;
+}
+
+/*ups the opacity and adds shadows when hovering over the p element*/
+.projects >p:hover{
+    opacity: 1;
+    box-shadow: 0 0 5px #fff;
+}
+
+
+h3 {
+    color: var(--text);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    display: flex;
+    height: 300px;
+    width: 100%;
+    gap: 1rem;
+    background-color: var(--first-highlight);
+    padding: 20px;
+    flex-wrap:wrap ;
+    margin-bottom: 20px;
+}
+
+
+.bg1{
+     background: url(../Assets/Screenshot\ \(1\).png);
+    
+}
+
+.bg1 h3, .bg2 h3, .bg3 h3, .bg4 h3, .bg5 h3{
+    text-decoration: underline;
+    font-size: 20px;
+    color: black;
+    background-color: #e7e7e7;
+    display: block;
+    text-align: center;
+}
+
+.bg2{
+    background: url(../Assets/mock-1.jpg);
+}
+
+.bg3{
+    background: url(../Assets/mock-2.jpg);
+}
+
+.bg4{
+    background: url(../Assets/mock-3.jpg);
+}
+
+.bg5{
+    background: url(../Assets/mock\ app.jpg);
+}
+
+.box >div {
+    flex: .7;
+    border-radius: 1rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    transition: all .8s cubic-bezier(.25, .4, .45, 1.4);
+}
+
+.box >.bg1 {
+    flex: 1.5;
+    outline: none;
+    transition: all 0.25s ease-in;
+    box-shadow: 0 0 30px #fbfaf6;
+}
+
+.box > div:hover{
+flex: 3;  
+outline: none;
+box-shadow:
+    inset 0 0 30px #fff,      
+    inset 0 0 50px #f0f,   
+    inset 0 0 50px #0ff,
+    0 0 30px red;
+}
+
+footer{
+    background-image: url("./pxfuel.jpg");
+    font-family:sans-serif;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+}
+
+h4{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    align-content: center;
+    padding: 14px 28px;
+    background: var(--first-highlight);
+}
+
+h4:hover {
+    background-color: white;
+    color: black;
+}
+
+.btn {
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+/* Green */
+.github {
+    color: green;
+    background: var(--second-highlight)
+}
+
+.github:hover {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* Blue */
+.email {
+    color: dodgerblue;
+    background: var(--second-highlight)
+}
+
+.email:hover {
+    background: #2196F3;
+    color: white;
+}
+
+/* Red */
+.linked {
+    color: red;
+    background: var(--second-highlight);
+}
+
+.linked:hover {
+    background: #f44336;
+    color: white;
+}
+
+/* Gray */
+.default {
+    color: black;
+}
+
+.default:hover {
+    background: #e7e7e7;
+}
+
+@media screen and (max-width: 800px) {
+    #About-Me {
+        font-size: 21px;
+    }
+    .About-Me >h2 {  
+        font-size: 35px;
+    }
+
+    .hero{
+        background-position: center;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    header h1 {
+        display: inline-block;
+       text-align: center;
+        font-size: 48px;
+    }
+
+#About-Me {
+    font-size: 18px;
+    text-align: center;
+    margin: 15px;
+}
+
+ .About-Me >h2 {  
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    padding-bottom: 10px;
+}
+
+
+aside.image-section {
+    margin-top: 70px;
+    height: 400px;
+    border-radius: 15%;
+}
+ .projects >h2 {
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
+    margin-right: 40%;
+    padding: 10px;
+}
+}
