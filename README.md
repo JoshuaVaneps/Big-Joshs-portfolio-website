@@ -13,6 +13,12 @@ whether I am the right fit for their organization.
  repsonsive and shows clearly at all screen sizes and it is even equipped with contact buttons that allow the user
  to reach me at my "linked in", "github", "email", or through a contact form page that is opened when the user clicks the "Contact me" button.
  
+ link: https://joshuavaneps.github.io/Big-Joshs-portfolio-website/
+
+ 
+ ![Screenshot (2)](https://user-images.githubusercontent.com/111782130/235193748-7411bdbd-1e29-4a2f-9134-018c075c515a.png)
+
+ 
  ## Contributing
  All pulls and push request are welcome please message before commiting changes
  
